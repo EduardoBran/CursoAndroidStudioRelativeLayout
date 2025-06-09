@@ -1,0 +1,65 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Um título no topo e centralizado horizontalmente -->
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Título"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"/>
+
+    <!-- Um botão abaixo do título, alinhado à esquerda do pai -->
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Esquerda"
+        android:layout_below="@id/title"
+        android:layout_alignParentStart="true"/>
+
+    <!-- Outro botão abaixo do título, alinhado à direita do pai -->
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Direita"
+        android:layout_below="@id/title"
+        android:layout_alignParentEnd="true"/>
+
+    <!-- Um terceiro botão, centralizado na tela -->
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Centro"
+        android:layout_centerInParent="true"/>
+
+</RelativeLayout>
+
+<!--
+
+RelativeLayout é um ViewGroup que posiciona cada filho em relação ao pai ou a outros irmãos,
+usando atributos de layout específicos.
+
+Atributo	O que faz
+android:layout_alignParentStart="true"	Alinha a borda “start” (início) da View à borda start do pai
+android:layout_alignParentEnd="true"	Alinha a borda “end” (final) da View à borda end do pai
+android:layout_alignParentTop="true"	Alinha a borda superior da View ao topo do pai
+android:layout_alignParentBottom="true"	Alinha a borda inferior da View à base (bottom) do pai
+android:layout_centerInParent="true"	Centraliza a View horizontal e verticalmente dentro do pai
+android:layout_centerHorizontal="true	Centraliza a View apenas horizontalmente dentro do pai
+android:layout_centerVertical="true	Centraliza a View apenas verticalmente dentro do pai
+
+Para posicionar em relação a outra View com ID @+id/textview_1:
+
+Atributo	O que faz
+android:layout_below="@id/textview_1"	Coloca a View abaixo da View de ID textview_1
+android:layout_above="@id/textview_1"	Coloca a View acima da View de ID textview_1
+android:layout_toStartOf="@id/textview_1"	Coloca a View à esquerda (start) da View textview_1
+android:layout_toEndOf="@id/textview_1"	Coloca a View à direita (end) da View textview_1
+
+-->
