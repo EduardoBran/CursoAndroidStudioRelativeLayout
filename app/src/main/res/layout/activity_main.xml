@@ -5,66 +5,124 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#08AD7F"
+    android:layout_margin="16dp"
     tools:context=".MainActivity">
 
-    <EditText
-        android:id="@+id/edittext_email"
-        android:layout_width="match_parent"
+    <TextView
+        android:id="@+id/textview_name"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="128dp"
-        android:layout_marginEnd="16dp"
-        android:autofillHints="emailAddress"
-        android:background="@color/white"
-        android:hint="Email"
-        android:inputType="textEmailAddress"
-        android:padding="16dp" />
+        android:text="Olá, Nome e Sobrenome!" />
 
-    <EditText
-        android:id="@+id/edittext_password"
-        android:layout_width="match_parent"
+    <TextView
+        android:id="@+id/textview_learn"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/edittext_email"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="16dp"
-        android:autofillHints="password"
-        android:background="@color/white"
-        android:hint="Senha"
-        android:inputType="textPassword"
-        android:padding="16dp" />
+        android:layout_below="@+id/textview_name"
+        android:layout_marginTop="16dp"
+        android:text="O que vamos aprender hoje?"
+        android:textSize="22sp"
+        android:textStyle="bold" />
 
-    <!-- Elemento Invisível no Centro da Tela dividindo a tela em dois -->
     <View
         android:id="@+id/view_center"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_centerHorizontal="true" />
 
-    <!-- Vai ser alinhado ao View Invisível no centro da tela -->
-    <Button
-        android:id="@+id/button_login"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/edittext_password"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="4dp"
-        android:layout_marginTop="8dp"
+    <ImageView
+        android:id="@+id/image_develompent"
+        android:layout_width="128dp"
+        android:layout_height="144dp"
+        android:layout_below="@id/textview_learn"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="32dp"
         android:layout_toStartOf="@+id/view_center"
-        android:text="Login" />
+        android:contentDescription="Desenvolvimento"
+        android:src="@drawable/image_development" />
 
-    <Button
-        android:id="@+id/button_register"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/edittext_password"
+    <ImageView
+        android:id="@+id/image_design"
+        android:layout_width="128dp"
+        android:layout_height="144dp"
+        android:layout_below="@id/textview_learn"
         android:layout_alignParentEnd="true"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="32dp"
         android:layout_toEndOf="@+id/view_center"
+        android:contentDescription="Design"
+        android:src="@drawable/image_design" />
+
+    <ImageView
+        android:id="@+id/image_ai"
+        android:layout_width="128dp"
+        android:layout_height="144dp"
+        android:layout_below="@id/image_design"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="32dp"
+        android:layout_toStartOf="@+id/view_center"
+        android:contentDescription="Inteligência Artificial"
+        android:src="@drawable/image_ai" />
+
+    <ImageView
+        android:id="@+id/image_explore"
+        android:layout_width="128dp"
+        android:layout_height="144dp"
+        android:layout_below="@id/image_design"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="32dp"
+        android:layout_toEndOf="@+id/view_center"
+        android:contentDescription="Explorar"
+        android:src="@drawable/image_explore" />
+
+    <TextView
+        android:id="@+id/textview_popular_courses"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/image_ai"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="32dp"
+        android:text="Cursos Populares" />
+
+    <TextView
+        android:id="@+id/textview_see_all"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/image_ai"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="32dp"
+        android:text="Ver todos"
+        android:textStyle="bold" />
+
+    <View
+        android:id="@+id/view_background"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:layout_below="@+id/textview_popular_courses"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/image_background" />
+
+    <TextView
+        android:id="@+id/textview_android"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/view_background"
+        android:layout_alignBottom="@+id/view_background"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="16dp"
+        android:gravity="center_vertical"
+        android:text="Desenvolvimento Android"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/image_android"
+        android:layout_alignTop="@+id/view_background"
+        android:layout_alignBottom="@+id/view_background"
+        android:layout_alignParentEnd="true"
         android:layout_marginEnd="16dp"
-        android:text="Cadastro" />
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        app:tint="@color/white"
+        android:src="@drawable/ic_android"/>
 
 
 </RelativeLayout>
